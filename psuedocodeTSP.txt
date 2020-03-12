@@ -1,0 +1,10 @@
+public static int computeCost(ArrayList<Integer> tour){
+    int cost = 0;
+        for(int i = 0 i <= tour.size()-1; i++){
+        cost += adj[tour.get(i)][tour.get(i+1)];
+        }//end for
+    if(tour.size() == CITIES){
+        cost += adj[(tour.getsize()-1)][0];
+    }//end if
+    return cost;
+}//computeCost
